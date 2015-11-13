@@ -11,7 +11,7 @@ The installation is fully automatic and requires:
 * Building all the Docker containers with '''docker-compose build'''
 
 To start the application simply
-'''docker-compose up'''
+```docker-compose up```
 
 ### Configuration
 
@@ -25,40 +25,40 @@ The posts are aggregated by crawling the websites (Tripadvisor and the Skyscrape
 
 To start spiders simply issue GET requests to:
 
-'''http://127.0.0.1:5000/start_spider/<spider_name>'''
+```http://127.0.0.1:5000/start_spider/<spider_name>```
 
 The available spider names are:
 
-'''tripadvisor'''
+```tripadvisor```
 and
-'''skyscraper'''
+```skyscraper```
 
 To stop all current crawls issue a GET request to:
 
-'''http://127.0.0.1:5000/stop_crawls/'''
+```http://127.0.0.1:5000/stop_crawls/```
 
 The spiders keep track of the visited urls and scraped posts. In order to resume a spider issue a GET request to:
 
-'''127.0.0.1:5000/resume_spider/<spider_name>'''
+```127.0.0.1:5000/resume_spider/<spider_name>```
 
 ### Listener
 
 To start listening to the Twitter stream simply go:
 
-'''http://127.0.0.1:5000/twitter/start_listening/'''
+```http://127.0.0.1:5000/twitter/start_listening/```
 
 and to stop:
 
-'''http://127.0.0.1:5000/twitter/stop_listening/'''
+```http://127.0.0.1:5000/twitter/stop_listening/```
 
 
 ## Getting the results
 
 You can easily get the overall results by GETting:
 
-'''http://127.0.0.1:5000/get_stats/'''
+```http://127.0.0.1:5000/get_stats/```
 
 or the results for a specific city (keyword) with:
 
-'''http://127.0.0.1:5000/get_stats/<city>'''
+```http://127.0.0.1:5000/get_stats/<city>```
 
