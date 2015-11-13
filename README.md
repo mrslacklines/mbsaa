@@ -7,8 +7,8 @@ The whole application is built as a set of microservices enclosed in interlinked
 You will need git, docker and docker-compose at the very minimum to install MBSAA.
 The installation is fully automatic and requires:
 
-* Pulling the github repo '''git clone git@github.com:user/repo.git'''
-* Building all the Docker containers with '''docker-compose build'''
+* Pulling the github repo `git clone git@github.com:user/repo.git`
+* Building all the Docker containers with `docker-compose build`
 
 To start the application simply
 ```docker-compose up```
