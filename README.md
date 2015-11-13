@@ -15,7 +15,7 @@ To start the application simply
 
 ### Configuration
 
-The configuration is kept in the '''config.yml''' file. Please feel free to modify it to suit your needs. The provided file is to serve as an example only -- not a production-ready configuration. 
+The configuration is kept in the `config.yml` file. Please feel free to modify it to suit your needs. The provided file is to serve as an example only -- not a production-ready configuration. 
 
 ## Agregating posts
 
