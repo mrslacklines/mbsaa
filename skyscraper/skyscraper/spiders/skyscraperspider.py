@@ -45,7 +45,7 @@ class SkyScraperSpider(CrawlSpider):
         self.classifier = pickle.load(open(self.classifier_file, 'r'))
         self.cities = self.configuration.get('SKYSCRAPER', {}).get('CITIES')
         self.base_url = self.configuration.get('SKYSCRAPER', {}).get('URL')
-        self.start_urls = [self.base_url,]
+        self.start_urls = [self.base_url, ]
         self._rules = (
             Rule(self.forum, follow=True),
             Rule(self.next_page, follow=True),
@@ -139,7 +139,7 @@ class SkyScraperSpider(CrawlSpider):
             if city_results:
                 city_obj = city_results[-1]
                 city = city_obj.get('asciname')
-                country = city.get('country_code')
+                country = city_obj.get('country_code')
                 continent = Country(country).continent.name
             else:
                 city = item['geo']

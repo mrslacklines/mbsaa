@@ -63,7 +63,7 @@ class Aggregator(StreamListener):
                     'TWITTER', {}). get('CITIES'):
                 text = status.get('text')
                 date = datetime.fromtimestamp(
-                    int(status.get('timestamp_ms'))/1000.0)
+                    int(status.get('timestamp_ms')) / 1000.0)
                 geo = status.get('user').get('location')
                 self.process_and_add_to_db(word, date, text, geo)
 
@@ -83,7 +83,7 @@ class Aggregator(StreamListener):
             if city_results:
                 city_obj = city_results[-1]
                 post_city = city_obj.get('asciname')
-                country = city.get('country_code')
+                country = city_obj.get('country_code')
                 continent = Country(country).continent.name
             else:
                 post_city = geo

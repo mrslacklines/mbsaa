@@ -196,7 +196,7 @@ class TripAdvisorSpider(CrawlSpider):
             if city_results:
                 city_obj = city_results[-1]
                 city = city_obj.get('asciname')
-                country = city.get('country_code')
+                country = city_obj.get('country_code')
                 continent = Country(country).continent.name
             else:
                 city = item['geo']

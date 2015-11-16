@@ -149,7 +149,7 @@ def _get_stats_for_city(resource, city_name):
                     collection.find({
                         'city': city_name,
                         'sentiment': sentiment,
-                        'geo.2': sentiment}).count()
+                        'geo.2': continent}).count()
             results[sentiment]['total'] = collection.find({
                 'city': city_name,
                 'sentiment': sentiment}).count()
@@ -169,7 +169,7 @@ def _get_stats_for_city(resource, city_name):
             results['all']['by_continent'][continent] = \
                 collection.find({
                     'city': city_name,
-                    'geo.2': sentiment}).count()
+                    'geo.2': continent}).count()
         results['all']['total'] = collection.find({'city': city_name}).count()
     return results
 
