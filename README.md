@@ -15,7 +15,14 @@ To start the application simply
 
 ### Configuration
 
-The configuration is kept in the `config.yml` file. Please feel free to modify it to suit your needs. The provided file is to serve as an example only -- not a production-ready configuration. 
+The configuration is kept in the `config.yml` file. Please feel free to modify it to suit your needs. The provided file is to serve as an example only -- not a production-ready configuration.
+
+### Gazetteer
+You will need to populate the Gazetteer database manually once the containers were successfully built. In order to do that you will need to connect to a running docker container:
+
+* Get the mbsaa container ID by running `docker ps` (e.g. b6387b38d346).
+* Connect to the container with: `docker exec -it [container-id] bash`
+* Once you were successfully logged in go to `/opt/mbsaa/res/gazetteer` and run `./load_db.sh cities15000.txt rethinkdb:28015`
 
 ## Agregating posts
 
