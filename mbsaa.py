@@ -57,7 +57,7 @@ def resume_spider(spider_name):
          ],
         cwd=dir)
     sleep(10)
-    return jsonify(**{'status': process.poll()})
+    return jsonify(**{'status': PROCESS_DICT[spider_name].poll()})
 
 
 @app.route('/twitter/start_listening/')
@@ -183,7 +183,7 @@ def _get_stats(city=None):
                 results = _get_stats_for_city(resource, city_name)
                 all_results[resource][city_name] = results
         else:
-            allresults[resource] = _get_stats_for_city(resource, city)
+            all_results[resource] = _get_stats_for_city(resource, city)
     return all_results
 
 
