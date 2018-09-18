@@ -1,4 +1,4 @@
-# MBSAA (MicroBlog Sentiment Analysis Application)
+# Microblog Sentiment Analysis
 
 The whole application is built as a set of microservices enclosed in interlinked docker containers.
 
